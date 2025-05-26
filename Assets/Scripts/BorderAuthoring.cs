@@ -1,11 +1,11 @@
 using Unity.Entities;
 using UnityEngine;
 
-public class EnvironmentBorderAuthoring : MonoBehaviour
+public class BorderAuthoring : MonoBehaviour
 {
-    public class Baker : Baker<EnvironmentBorderAuthoring>
+    public class Baker : Baker<BorderAuthoring>
     {
-        public override void Bake(EnvironmentBorderAuthoring authoring)
+        public override void Bake(BorderAuthoring authoring)
         {
             var entity = GetEntity(TransformUsageFlags.Dynamic);
             AddComponent(entity, new BorderTag());

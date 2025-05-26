@@ -4,13 +4,14 @@ using Unity.Mathematics;
 using Unity.Physics;
 
 [BurstCompile]
-public partial struct CollisionResponseSystem : ISystem
+public partial struct CollisionBorderSystem : ISystem
 {
+    [BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
         var simSingleton = SystemAPI.GetSingleton<SimulationSingleton>();
 
-        var collisionResponseJob = new CollisionResponseJob
+        var collisionResponseJob = new CollisionBorderJob
         {
             CharacterMoveLookup = SystemAPI.GetComponentLookup<CharacterMove>(),
             BorderTagLookup = SystemAPI.GetComponentLookup<BorderTag>(),
@@ -22,7 +23,7 @@ public partial struct CollisionResponseSystem : ISystem
 }
 
 [BurstCompile]
-public struct CollisionResponseJob : ICollisionEventsJob
+public struct CollisionBorderJob : ICollisionEventsJob
 {
     public ComponentLookup<CharacterMove> CharacterMoveLookup;
     public ComponentLookup<BorderTag> BorderTagLookup;
@@ -53,7 +54,6 @@ public struct CollisionResponseJob : ICollisionEventsJob
         var direction = math.normalizesafe(velocity);
 
         var reflectedDirection = math.reflect(direction, contactNormal);
-        reflectedDirection.x += 1f; // 弧形移动，避免卡住
         reflectedDirection.y = 0;
 
         var characterMove = CharacterMoveLookup[character];

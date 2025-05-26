@@ -31,9 +31,9 @@ public partial struct CharacterMoveJob : IJobEntity
         transform.Position.y = 0.15f;
 
         // 固定xz轴旋转
-        quaternion q = transform.Rotation;
-        q.value.x = 0;
-        q.value.z = 0;
-        transform.Rotation = q;
+        quaternion quaternion = transform.Rotation;
+        quaternion.value.x = 0;
+        quaternion.value.z = 0;
+        transform.Rotation = quaternion;
     }
 }

@@ -223,7 +223,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7203605042418465636}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5133acca008d4c75a9bee18b4187aa70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  Speed: 0.5
   Direction:
     x: 1
     y: 0
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 1
   CurrentHealth: 100
-  Damage: 5
+  Damage: 15
   CooldownTime: 1
 --- !u!114 &6729534738448700900
 MonoBehaviour:

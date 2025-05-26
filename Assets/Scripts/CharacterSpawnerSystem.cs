@@ -68,10 +68,10 @@ public partial struct CharacterSpawnerJob : IJobEntity
 
             ecb.SetComponent(chunkIndex, instance, new CharacterMove()
             {
-                Speed = 2.5f,
-                Direction = new float3(spawner.Type == CharacterType.Left ? 2 : -2, 0,
-                    spawner.Type == CharacterType.Left ? 1 : 1),
-                AngularVelocity = new float3(0, random.NextFloat(2, 8), 0)
+                Speed = 1.75f,
+                Direction = new float3(spawner.Type == CharacterType.Left ? 1 : -1, 0,
+                    spawner.Type == CharacterType.Left ? 1f : 1f),
+                AngularVelocity = new float3(0, random.NextFloat(5, 8), 0)
             });
         }
 

@@ -3,14 +3,14 @@ using Unity.Entities;
 using Unity.Physics;
 
 [BurstCompile]
-public partial struct AttackCollisionSystem : ISystem
+public partial struct CollisionAttackSystem : ISystem
 {
     [BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
         var simSingleton = SystemAPI.GetSingleton<SimulationSingleton>();
 
-        AttackCollisionJob attackCollisionJob = new AttackCollisionJob()
+        CollisionAttackJob attackCollisionJob = new CollisionAttackJob()
         {
             CharacterStatsLookup = SystemAPI.GetComponentLookup<CharacterStats>(),
             DestroyTagLookup = SystemAPI.GetComponentLookup<DestroyTag>(),
@@ -22,7 +22,7 @@ public partial struct AttackCollisionSystem : ISystem
 }
 
 [BurstCompile]
-public struct AttackCollisionJob : ICollisionEventsJob
+public struct CollisionAttackJob : ICollisionEventsJob
 {
     public ComponentLookup<CharacterStats> CharacterStatsLookup;
     public ComponentLookup<DestroyTag> DestroyTagLookup;

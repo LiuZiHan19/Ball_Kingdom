@@ -255,7 +255,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883213620}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 23ff31188ff4f344cbcccc8000dd39b4, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -392,8 +392,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   SpawnPrefab: {fileID: 7203605042418465636, guid: a8c84ebf36bca554db40066c509e20ee, type: 3}
-  SpawnCount: 50
-  WaveCount: 20
+  SpawnCount: 1000
+  WaveCount: 1
   SpawnPosition: {x: -8, y: 0.15, z: 0}
   SpawnZOffset: 4.5
   SpawnCooldownTime: 0.25
@@ -439,7 +439,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218498451}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 23ff31188ff4f344cbcccc8000dd39b4, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -557,7 +557,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824428088}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 23ff31188ff4f344cbcccc8000dd39b4, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -660,7 +660,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949242643}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 23ff31188ff4f344cbcccc8000dd39b4, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -780,8 +780,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 1
   SpawnPrefab: {fileID: 7203605042418465636, guid: 61dc4cfba783c16439dadbdd0306d96a, type: 3}
-  SpawnCount: 50
-  WaveCount: 20
+  SpawnCount: 1000
+  WaveCount: 1
   SpawnPosition: {x: 8, y: 0.15, z: 0}
   SpawnZOffset: 4.5
   SpawnCooldownTime: 0.25
